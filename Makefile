@@ -17,6 +17,6 @@ FILES = \
 		README.md \
 		make_cloud_cidr.sh
 
-cloud_cidr.list:
-	bash make_cloud_cidr.sh | grep -v ":" > cloud_cidr.list
+cloud_cidr.tsv:
+	bash make_cloud_cidr.sh | grep -v ":" | sort -u > cloud_cidr.tsv
 
